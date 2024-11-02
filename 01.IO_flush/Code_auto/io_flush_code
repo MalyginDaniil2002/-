@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ "$1" = " " ]; then
+	echo "Ввод переменных выполнен неверно!"
+	exit
+fi
+if (("$1" < 1)) || (($1 > 4)); then
+	echo "Введены неверные переменные!"
+	exit
+fi
+if ! [ -e "IO_Flush" ]; then
+	gcc IO_Flush.c -o IO_Flush
+fi
+./IO_Flush $1
+file_name="result"
+if [ -e $file_name ]; then
+	rm $file_name
+fi
+./IO_Flush $1 &> $file_name
