@@ -46,8 +46,11 @@
   src="Images/Terminal_result.jpg">
   <figcaption>
   Рисунок 1 -- Результат выполнения сочетаний вывода
+  <br>
+  <br>
   <figcaption>
 </figure>
+
 Также необходимо выполнить направление данных выводов в файл.
 Но так как используются два потока вывода,
 то необходимо использовать символ & перед командой записи >.
@@ -60,30 +63,41 @@
   src="Images/Result_1.jpg">
   <figcaption>
   Рисунок 2 -- Результат направления вывода программы IO_Flush_1 в файл
+  <br>
+  <br>
   <figcaption>
 </figure>
+
 
 <figure>
   <img
   src="Images/Result_2.jpg">
   <figcaption>
   Рисунок 3 -- Результат направления вывода программы IO_Flush_2 в файл
+  <br>
+  <br>
   <figcaption>
 </figure>
+
 
 <figure>
   <img
   src="Images/Result_3.jpg">
   <figcaption>
   Рисунок 4 -- Результат направления вывода программы IO_Flush_3 в файл
+  <br>
+  <br>
   <figcaption>
 </figure>
+
 
 <figure>
   <img
   src="Images/Result_4.jpg">
   <figcaption>
   Рисунок 5 -- Результат направления вывода программы IO_Flush_4 в файл
+  <br>
+  <br>
   <figcaption>
 </figure>
 
