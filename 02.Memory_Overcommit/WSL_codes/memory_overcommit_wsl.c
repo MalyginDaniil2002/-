@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
+#include <unistd.h>
 
-typedef unsigned long long type_size;
-typedef long double type_array;
+typedef unsigned int type_size;
+typedef long long type_array;
 #define INTERVAL 0.8
 #define LIMIT 2560
 
@@ -22,7 +22,7 @@ void overcommit(type_array *array, type_size size, int flag) {
         else
             array[index] = index;
         if ((index / step) % LIMIT == 0) {
-            Sleep(INTERVAL);
+            sleep(INTERVAL);
         }
         index += step;
     }
@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
     int flag;
     type_size size = 1;
     size, flag = get_data(argv, &size, &flag);
-    printf("size = %llu, flag = %i\n", size, flag);
+    printf("size = %u, flag = %i\n", size, flag);
     type_array *array = malloc(sizeof(type_array)*size);
     overcommit(array, size, flag);
     printf("STOP!!!\n");

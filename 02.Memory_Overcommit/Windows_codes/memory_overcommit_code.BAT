@@ -28,8 +28,8 @@ if not %~2==0 if not %~2==1 (
     exit /b
 )
 
-if not exist "memory_overcommit.exe" (
-    gcc memory_overcommit.c -o memory_overcommit.exe
+if not exist "memory_overcommit_win.exe" (
+    gcc memory_overcommit_win.c -o memory_overcommit_win.exe
 )
 
-memory_overcommit.exe %1 %2
+memory_overcommit_win.exe %1 %2
