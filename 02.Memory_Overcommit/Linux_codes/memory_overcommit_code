@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ -z "$1" ]] || [[ -z "$2" ]]; then
+	echo "Ввод выполнен не до конца!"
+	exit
+fi
+if ! [[ "$1" =~ ^[0-9]+$ ]] || ! [[ "$2" =~ ^[0-9]+$ ]]; then
+   echo "Был выполнен ввод нечислового типа данных"
+   exit
+fi
+if [[ "$1" -lt 0 ]] || [[ "$1" -gt 512000000 ]]; then
+	echo "Ввод размера массива выполнен неверно!"
+	exit
+fi
+if [[ "$2" -ne 0 ]] && [[ "$2" -ne 1 ]]; then
+	echo "Ввод варианта обращения выполнен неверно!"
+	exit
+fi
+if ! [ -e "memory_overcommit" ]; then
+	gcc memory_overcommit.c -o memory_overcommit
+fi
+./memory_overcommit $1 $2
