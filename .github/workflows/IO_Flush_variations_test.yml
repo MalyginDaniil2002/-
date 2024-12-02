@@ -1,0 +1,66 @@
+name: IO_Flush_variations_test
+
+on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+    workflow_dispatch:
+
+jobs:
+    setup_and_build:
+      name: Настройка и запуск билда
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Установка gcc
+          run: |
+            sudo apt-get update
+            sudo apt install build-essential
+            
+        - name: Взять исходники из Гита
+          uses: actions/checkout@v4
+            
+        - name: Программа собирается
+          run: |
+            cd 01.IO_flush/Code_variations
+            mkdir test
+            gcc IO_Flush_1.c -o io_flush_1
+            mv io_flush_1 text/io_flush_1
+            gcc IO_Flush_2.c -o io_flush_2
+            mv io_flush_2 text/io_flush_2
+            gcc IO_Flush_3.c -o io_flush_3
+            mv io_flush_3 text/io_flush_3
+            gcc IO_Flush_4.c -o io_flush_4
+            mv io_flush_4 text/io_flush_4
+            
+        - name: Сохранение результата билда для тестирования
+          uses: actions/upload-artifact@v4
+          with:
+            name: io_flush_variations
+            path: ${{ github.workspace }}/01.IO_flush/Code_variations/test
+    
+    test:
+      needs:
+        - setup_and_build
+        
+      name: Тестирование
+      runs-on: ubuntu-latest
+      steps:
+        - name: Загрузка результата билда для тестирования
+          uses: actions/download-artifact@v4
+          with:
+            name: io_flush_variations
+            path: test
+        
+        - name: Запуск тестирования
+          run: |
+            cd Code_auto
+            chmod 777 io_flush_1
+            chmod 777 io_flush_2
+            chmod 777 io_flush_3
+            chmod 777 io_flush_4
+            ./io_flush_1
+            ./io_flush_2
+            ./io_flush_3
+            ./io_flush_4

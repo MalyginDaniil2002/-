@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 Результаты проверки тестов и билдов:
-![IO Flush 2 test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/IO_Flush_2_test.yml/badge.svg)
+![IO Flush 1 test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/IO_Flush_variations_test.yml/badge.svg)
+![IO Flush 2 test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/IO_Flush_auto_test.yml/badge.svg)
 =======
->>>>>>> parent of 8098594 (Добавил бейджик)
 # Описание репозитория
 ## Автор
 - ФИО - Малыгин Даниил Александрович
@@ -15,3 +14,4 @@
 
 1) Вывод и буферизация TTY и PTY.
 2) Оверкоммит.
+3) Непрерывная интеграция.
