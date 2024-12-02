@@ -1,6 +1,6 @@
-Результаты проверки тестов и билдов:
 ![IO Flush 1 test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/IO_Flush_variations_test.yml/badge.svg)
 ![IO Flush 2 test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/IO_Flush_auto_test.yml/badge.svg)
+![Memory Overcommit WSL test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/Memory_Overcommit_WSL_test.yml/badge.svg)
 =======
 # Описание репозитория
 ## Автор
