@@ -26,13 +26,13 @@ jobs:
             cd 01.IO_flush/Code_variations
             mkdir test
             gcc IO_Flush_1.c -o io_flush_1
-            mv io_flush_1 text/io_flush_1
+            mv io_flush_1 test/io_flush_1
             gcc IO_Flush_2.c -o io_flush_2
-            mv io_flush_2 text/io_flush_2
+            mv io_flush_2 test/io_flush_2
             gcc IO_Flush_3.c -o io_flush_3
-            mv io_flush_3 text/io_flush_3
+            mv io_flush_3 test/io_flush_3
             gcc IO_Flush_4.c -o io_flush_4
-            mv io_flush_4 text/io_flush_4
+            mv io_flush_4 test/io_flush_4
             
         - name: Сохранение результата билда для тестирования
           uses: actions/upload-artifact@v4
