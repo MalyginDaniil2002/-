@@ -1,4 +1,8 @@
-![IO Flush Auto](https://github.com/github/docs/actions/workflows/IO_Flush_test.yml/badge.svg)
+<<<<<<< HEAD
+Результаты проверки тестов и билдов:
+![IO Flush 2 test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/IO_Flush_2_test.yml/badge.svg)
+=======
+>>>>>>> parent of 8098594 (Добавил бейджик)
 # Описание репозитория
 ## Автор
 - ФИО - Малыгин Даниил Александрович
