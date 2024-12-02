@@ -1,4 +1,4 @@
-name: IO_Flush_auto_test
+name: IO Flush auto test
 
 on:
     push:

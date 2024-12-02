@@ -1,4 +1,4 @@
-name: IO_Flush_variations_test
+name: IO Flush variations test
 
 on:
     push:
