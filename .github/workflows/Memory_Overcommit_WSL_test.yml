@@ -1,0 +1,33 @@
+name: IO_Flush_variations_test
+
+on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+    workflow_dispatch:
+
+jobs:
+    setup_and_build:
+      name: Настройка и запуск билда
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Установка gcc
+          run: |
+            sudo apt-get update
+            sudo apt install build-essential
+            
+        - name: Взять исходники из Гита
+          uses: actions/checkout@v4
+            
+        - name: Программа собирается
+          run: |
+            cd 02.Memory_Overcommit/WSL_codes
+            gcc memory_overcommit_wsl.c -o memory_overcommit_wsl
+            
+        - name: Сохранение результата билда
+          uses: actions/upload-artifact@v4
+          with:
+            name: WSL_codes
+            path: ${{ github.workspace }}/02.Memory_Overcommit/WSL_codes/
