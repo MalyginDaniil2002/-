@@ -1,3 +1,4 @@
+![IO Flush Auto](https://github.com/github/docs/actions/workflows/IO_Flush_test.yml/badge.svg)
 # Описание репозитория
 ## Автор
 - ФИО - Малыгин Даниил Александрович
