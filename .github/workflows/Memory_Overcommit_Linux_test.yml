@@ -1,4 +1,4 @@
-name: Memory Overcommit WSL test
+name: Memory Overcommit Linux test
 
 on:
     push:
