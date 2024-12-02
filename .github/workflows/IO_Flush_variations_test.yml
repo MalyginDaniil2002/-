@@ -55,7 +55,7 @@ jobs:
         
         - name: Запуск тестирования
           run: |
-            cd Code_auto
+            cd test
             chmod 777 io_flush_1
             chmod 777 io_flush_2
             chmod 777 io_flush_3
