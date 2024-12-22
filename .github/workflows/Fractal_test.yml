@@ -1,0 +1,56 @@
+name: Fractal test
+
+on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+    workflow_dispatch:
+
+jobs:
+    setup_and_build:
+      name: Настройка и запуск билда
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Установка make
+          run: |
+            sudo apt update
+            sudo apt install make
+            
+        - name: Взять исходники из Гита
+          uses: actions/checkout@v4
+            
+        - name: Сборка программа
+          run: |
+            cd 03.Fractal/Codes/Modules
+            make -f makefile debug
+            
+        - name: Сохранение результата билда для тестирования
+          uses: actions/upload-artifact@v4
+          with:
+            name: fractal
+            path: ${{ github.workspace }}/03.Fractal/Codes/Modules
+    
+    test:
+      needs:
+        - setup_and_build
+        
+      name: Тестирование
+      runs-on: ubuntu-latest
+      steps:
+        - name: Загрузка результата билда для тестирования
+          uses: actions/download-artifact@v4
+          with:
+            name: fractal
+            path: Codes/Modules
+        
+        - name: Запуск тестирования
+          run: |
+            cd Codes
+            chmod 777 fractal_code
+            ./fractal_code 1 7
+            cat fractal.pgm
+            cd Modules
+            make -f makefile debug_test
+            ./debug_test

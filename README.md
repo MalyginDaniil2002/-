@@ -2,6 +2,7 @@
 ![IO Flush 2 test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/IO_Flush_auto_test.yml/badge.svg)
 ![Memory Overcommit Windows test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/Memory_Overcommit_Windows_test.yml/badge.svg)
 ![Memory Overcommit Linux test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/Memory_Overcommit_Linux_test.yml/badge.svg)
+![Fractal test](https://github.com/MalyginDaniil2002/Modern-programming-tools-and-technologies/actions/workflows/Fractal_test.yml/badge.svg)
 =======
 # Описание репозитория
 ## Автор
