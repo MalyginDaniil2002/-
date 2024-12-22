@@ -106,7 +106,7 @@ void create_empty_fractal(image_p picture, int size) {
     }
 }
 
-void empty_fractal(image_p picture, int flag, int limit_level)
+void empty_fractal(int flag, int limit_level)
 {
     int level = 1, size;
     size = pow_func(3, max_level);
@@ -119,16 +119,6 @@ void empty_fractal(image_p picture, int flag, int limit_level)
         triangle(picture_fractal, level, limit_level, 0, 0, size);
         draw_inverted_image(picture_fractal, size);
     }
-    /*
-    char file_name[14] = "fractal";
-    char format[] = ".pgm";
-    file_name[7] = flag + '0';
-    file_name[8] = limit_level + '0';
-    for (int i=9; i<13; i++)
-        file_name[i] = format[i-9];
-    file_name[13] = '\0';
-    save_pgm(picture_fractal, file_name);
-    */
     save_pgm(picture_fractal, "fractal.pgm");
     free_image(picture_fractal);
 }

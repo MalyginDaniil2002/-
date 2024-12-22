@@ -15,5 +15,6 @@ fi
 if ! [[ -e "Modules/release" ]]; then
 	cd Modules
 	make
+	cd ..
 fi
-./release $1 $2
+./Modules/release $1 $2
