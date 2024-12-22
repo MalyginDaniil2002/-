@@ -1,4 +1,4 @@
-name: Fractal test
+name: Fractal unit-test
 
 on:
     push:
@@ -24,7 +24,8 @@ jobs:
         - name: Сборка программа
           run: |
             cd 03.Fractal/Codes/Modules
-            make -f makefile release
+            make -f makefile debug
+            make -f makefile debug_test
             
         - name: Сохранение результата билда для тестирования
           uses: actions/upload-artifact@v4
@@ -48,6 +49,5 @@ jobs:
         - name: Запуск тестирования
           run: |
             cd Codes/Modules
-            chmod 777 release
-            ./release 2 7
-            rm fractal.pgm
+            chmod 777 debug_test
+            ./debug_test
