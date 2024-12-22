@@ -22,7 +22,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal11.png">
+  src="PNG_images/fractal11.png"
+  width="600">
   <figcaption>
   Рисунок 1 -- Ковёр Серпинского уровня 1
   <br>
@@ -32,7 +33,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal12.png">
+  src="PNG_images/fractal12.png"
+  width="600">
   <figcaption>
   Рисунок 2 -- Ковёр Серпинского уровня 2
   <br>
@@ -42,7 +44,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal13.png">
+  src="PNG_images/fractal13.png"
+  width="600">
   <figcaption>
   Рисунок 3 -- Ковёр Серпинского уровня 3
   <br>
@@ -52,7 +55,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal14.png">
+  src="PNG_images/fractal14.png"
+  width="600">
   <figcaption>
   Рисунок 4 -- Ковёр Серпинского уровня 4
   <br>
@@ -62,7 +66,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal15.png">
+  src="PNG_images/fractal15.png"
+  width="600">
   <figcaption>
   Рисунок 5 -- Ковёр Серпинского уровня 5
   <br>
@@ -72,7 +77,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal16.png">
+  src="PNG_images/fractal16.png"
+  width="600">
   <figcaption>
   Рисунок 6 -- Ковёр Серпинского уровня 6
   <br>
@@ -82,7 +88,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal17.png">
+  src="PNG_images/fractal17.png"
+  width="600">
   <figcaption>
   Рисунок 7 -- Ковёр Серпинского уровня 7
   <br>
@@ -101,7 +108,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal21.png">
+  src="PNG_images/fractal21.png"
+  width="600">
   <figcaption>
   Рисунок 8 -- Треугольник Серпинского уровня 1
   <br>
@@ -111,7 +119,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal22.png">
+  src="PNG_images/fractal22.png"
+  width="600">
   <figcaption>
   Рисунок 9 -- Треугольник Серпинского уровня 2
   <br>
@@ -121,7 +130,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal23.png">
+  src="PNG_images/fractal23.png"
+  width="600">
   <figcaption>
   Рисунок 10 -- Треугольник Серпинского уровня 3
   <br>
@@ -131,7 +141,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal24.png">
+  src="PNG_images/fractal24.png"
+  width="600">
   <figcaption>
   Рисунок 11 -- Треугольник Серпинского уровня 4
   <br>
@@ -141,7 +152,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal25.png">
+  src="PNG_images/fractal25.png"
+  width="600">
   <figcaption>
   Рисунок 12 -- Треугольник Серпинского уровня 5
   <br>
@@ -151,7 +163,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal26.png">
+  src="PNG_images/fractal26.png"
+  width="600">
   <figcaption>
   Рисунок 13 -- Треугольник Серпинского уровня 6
   <br>
@@ -161,7 +174,8 @@
 
 <figure>
   <img
-  src="PNG_images/fractal27.png">
+  src="PNG_images/fractal27.png"
+  width="600">
   <figcaption>
   Рисунок 14 -- Треугольник Серпинского уровня 7
   <br>
