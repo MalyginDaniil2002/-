@@ -86,6 +86,24 @@ void triangle(image_p picture, int level, int limit_level, int x_min, int y_min,
     triangle(picture, level+1, limit_level, x_min+x_part, y_min+h, x_mid);
 }
 
+void change_vertical(image_p picture, int size, int h) {
+    int color;
+    image_p new_picture = create_image(size, size);
+    for (int y=0; y<size; y++) {
+        for (int x=0; x<size; x++) {
+            color = get_pixel(picture, x, y);
+            set_pixel(new_picture, x, (y + h) % size, color);
+        }
+    }
+    for (int y=0; y<size; y++) {
+        for (int x=0; x<size; x++) {
+            color = get_pixel(new_picture, x, y);
+            set_pixel(picture, x, y, color);
+        }
+    }
+    free_image(new_picture);
+}
+
 void draw_inverted_image(image_p picture, int size) {
     int color_1, color_2;
     for (int x=0; x<size; x++) {
@@ -117,6 +135,7 @@ void empty_fractal(int flag, int limit_level)
     } else {
         draw_triangle(picture_fractal, size);
         triangle(picture_fractal, level, limit_level, 0, 0, size);
+        change_vertical(picture_fractal, size, size * (1 - coef / 2) / 2);
         draw_inverted_image(picture_fractal, size);
     }
     save_pgm(picture_fractal, "fractal.pgm");

@@ -1,3 +1,4 @@
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -45,7 +46,14 @@ bool picture_check(int flag, int limit_level) {
     size = pow_func(3, max_level);
     image_p picture = create_image(size, size);
     create_empty_fractal(picture, size);
-    carpet(picture, level, limit_level, 0, 0);
+    if (flag == 1) {
+        carpet(picture, level, limit_level, 0, 0);
+    } else {
+        draw_triangle(picture, size);
+        triangle(picture, level, limit_level, 0, 0, size);
+        change_vertical(picture, size, size * (1 - sqrt(3) / 2) / 2);
+        draw_inverted_image(picture, size);
+    }
     char tmp[4];
     char fractal_string[size][size];
     for (int y=0; y<size; y++) {

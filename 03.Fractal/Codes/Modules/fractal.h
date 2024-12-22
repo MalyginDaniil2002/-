@@ -10,11 +10,17 @@
  */
 void empty_fractal(int flag, int limit_level);
 
+int pow_func(int m, int n);
+
 void carpet(image_p picture, int level, int limit_level, int x_min, int y_min);
 
-void draw_carpet(image_p picture, int x_min, int y_min, int x_max, int y_max);
+void draw_triangle(image_p picture, int size);
 
-int pow_func(int m, int n);
+void triangle(image_p picture, int level, int limit_level, int x_min, int y_min, int size);
+
+void change_vertical(image_p picture, int size, int h);
+
+void draw_inverted_image(image_p picture, int size);
 
 void create_empty_fractal(image_p picture, int size);
 
