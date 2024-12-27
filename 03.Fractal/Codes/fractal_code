@@ -12,9 +12,9 @@ if (("$2" < 1)) || (("$2" > 7)); then
 	echo "Ввод уровня фрактала выполнен неверно!"
 	exit
 fi
-if ! [[ -e "Modules/release" ]]; then
-	cd Modules
+if ! [[ -e "Main_modules/release" ]]; then
+	cd Main_modules
 	make
 	cd ..
 fi
-./Modules/release $1 $2
+./Main_modules/release $1 $2

@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include "image.h"
 #include "fractal.h"
-#include "../Test_modules/utest.h"
+#include "utest.h"
 
 struct ImageTestFixture {
     image_p i;
