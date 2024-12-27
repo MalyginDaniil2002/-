@@ -23,14 +23,14 @@ jobs:
             
         - name: Сборка программа
           run: |
-            cd 03.Fractal/Codes/Modules
+            cd 03.Fractal/Codes/Main_modules
             make -f makefile release
             
         - name: Сохранение результата билда для тестирования
           uses: actions/upload-artifact@v4
           with:
             name: fractal
-            path: ${{ github.workspace }}/03.Fractal/Codes/Modules
+            path: ${{ github.workspace }}/03.Fractal/Codes/Main_modules
     
     test:
       needs:
@@ -43,11 +43,11 @@ jobs:
           uses: actions/download-artifact@v4
           with:
             name: fractal
-            path: Codes/Modules
+            path: Codes/Main_modules
         
         - name: Запуск тестирования
           run: |
-            cd Codes/Modules
+            cd Codes/Main_modules
             chmod 777 release
             ./release 2 7
             rm fractal.pgm
